@@ -13,8 +13,8 @@ abstract class EditingState extends State {
 }
 
 ///Klasa stanja koja označava da je postavljanje vremena gotovo i da se program može prestat izvodit
-final class EditingCompleted extends State {
-  EditingCompleted({required super.time});
+final class StopBlinkingState extends State {
+  StopBlinkingState({required super.time});
 }
 
 //Ispod se nalaze klase stanja koje označavaju treperenje pojedinih elemenata prikazanog vremena
@@ -22,6 +22,18 @@ final class EditingCompleted extends State {
 
 final class BlinkHourState extends EditingState {
   BlinkHourState({required super.time});
+}
+
+final class IncrementHourState extends EditingState {
+  IncrementHourState({required super.time});
+}
+
+final class IncrementMinuteState extends EditingState {
+  IncrementMinuteState({required super.time});
+}
+
+final class IncrementSecondState extends EditingState {
+  IncrementSecondState({required super.time});
 }
 
 final class BlinkMinuteState extends EditingState {
