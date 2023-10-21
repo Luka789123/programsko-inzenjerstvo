@@ -1,1 +1,1 @@
-enum SensorEvent { validateCard, focusLost, idle }
+enum SensorEvent { focusGained, idle }
